@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .horizontal {
+            display: flex;
+            gap: 5px;
+        }
+        .vertical{
+            display: flex;
+            flex-direction: column;
+        }
+        .number, label{
+            font-size: 250%;
+        }
+        .border{
+            background-color:  lightgray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        document.getElementById('app').innerHTML = 
+        fromAndToDateSearch(6,2,2024, 16,2,2024);
+
+        function fromAndToDateSearch(day1, month1, year1, day2, month2, year2){
+            return  /*HTML*/`
+                <div class="vertical">
+                    <div>
+                        Fra:
+                        ${createDateSelector(day1,month1, year1)}
+                    </div>
+                    <div>
+                        Til:
+                        ${createDateSelector(day2, month2, year2)}
+                    </div>
+                    <button>Søk</button>
+                </div>
+            `;
+        }
+
+        function createDateSelector(day, month, year){
+            return /*HTML*/`
+                <div class="horizontal">
+                    <label>Dag: </label>
+                    ${createNumberSelector(day, 1, 28)}
+                    <label>Måned: </label>
+                    ${createNumberSelector(month, 1, 12)}
+                    <label>År: </label>
+                    ${createNumberSelector(year, 2020, 2025)}
+                </div>
+            `;
+        }
+
+        function createNumberSelector(number, min, max){
+            return /*HTML*/`
+                <div class="horizontal border">
+                    <div class="number">${number}</div>
+                    <div class="vertical">
+                        ${createButton('▲', number < max)}
+                        ${createButton('▼', number > min)}
+                    </div>
+                </div>
+            `;
+        }
+        
+        function createButton(text, isEnabled) {
+            return /*HTML*/`
+                <button ${isEnabled ? '' : 'disabled'}>
+                    ${text}
+                </button>
+            `;
+        }
+
+        function createButton2(text, isEnabled) {
+            return '<button ' + isEnabled + (isEnabled ? '' : 'disabled') + '>'
+                + text + '</button>';
+        }
+    </script>
+
+
+</body>
+
+</html>

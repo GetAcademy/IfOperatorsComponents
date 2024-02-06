@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        createButton('Hei 1', true);
+        createButton('Hei 2', false);
+
+        function createButton(text, isEnabled) {
+            document.getElementById('app').innerHTML +=  /*HTML*/`
+                <button ${isEnabled ? '' : 'disabled'}>
+                    ${text}
+                </button>
+            `;
+        }
+    </script>
+
+
+</body>
+
+</html>

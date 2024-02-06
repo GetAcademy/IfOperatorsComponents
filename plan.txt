@@ -26,6 +26,7 @@ Plan for i dag:
 * Hvordan lage enkle komponenter i form av funksjoner med parametre og returverdi
   - Vi fokuserer kun på å vise dette - ikke at det skal "virke", dvs. funksjonalitet
   - Oppned-knapp med disabled/enabled og onclick
+  - 2 x Oppned-knapp med disabled/enabled og onclick
   - Tall og oppned-knapp
-  - Datovelger
-  - Fra og til datovelger
+  - Datovelger = 3 x Tall og oppned-knapp
+  - Fra og til datovelger = 2 x datovelger + knapp
