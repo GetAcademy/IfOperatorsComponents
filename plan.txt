@@ -22,3 +22,10 @@ Plan for i dag:
   - logiske operatorer: && || !
   - tilorningsoperatorer = += -= *= /= %= ++ --
   - ternary operator logiskVerdi ? verdiHvisSann : verdiEllers
+
+* Hvordan lage enkle komponenter i form av funksjoner med parametre og returverdi
+  - Vi fokuserer kun på å vise dette - ikke at det skal "virke", dvs. funksjonalitet
+  - Oppned-knapp med disabled/enabled og onclick
+  - Tall og oppned-knapp
+  - Datovelger
+  - Fra og til datovelger
