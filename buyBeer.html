@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Alder: <br />
+        <input id="age" onchange="checkIfCanBuyBeer()" type="range" min="1" step="1" max="100" /><br />
+        Ser ut som alder: <br />
+        <input id="looksAge" onchange="checkIfCanBuyBeer()" type="range" min="1" step="1" max="100" /><br />
+        <input id="hasId" onchange="checkIfCanBuyBeer()" type="checkbox" />
+        Har legitimasjon: <br />
+    </div>
+
+    <div id="info"></div>
+
+    <script>
+        // Pause til 10:36
+        
+        checkIfCanBuyBeer();
+        function checkIfCanBuyBeer() {
+            let age = document.getElementById('age').valueAsNumber;
+            let looksAge = document.getElementById('looksAge').valueAsNumber;
+            let hasId = document.getElementById('hasId').checked;
+
+            // if (looksAge >= 25 || hasId && age >= 18) {
+            //     answer = createColoredSpan('green', 'Ja');
+            // } else {
+            //     answer = createColoredSpan('red', 'Nei');
+            // }
+            let canBuyBeer = looksAge >= 25 || hasId && age >= 18;
+            let color = canBuyBeer ? 'green' : 'red';
+            let text = canBuyBeer ? 'Ja' : 'Nei';
+            answer = createColoredSpan(color, text);
+            // answer =  canBuyBeer ? createColoredSpan('green', 'Ja') : createColoredSpan('red', 'Nei');
+
+            document.getElementById('info').innerHTML = /*HTML*/`
+                Alder: ${age}<br/>
+                Ser ut som alder: ${looksAge}<br/>
+                Har legitimasjon: ${hasId}<br/>
+                Får kjøpe øl: ${answer}<br/>
+            `;
+        }
+
+        function createColoredSpan(color, text) {
+            return `<span style="color: ${color}">${text}</span>`;
+        }
+
+    </script>
+</body>
+
+</html>
