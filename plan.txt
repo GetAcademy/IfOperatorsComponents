@@ -1,0 +1,24 @@
+Oversikt emne 1
+1. Intro 
+2. Funksjon, variabel, operator, valg 
+3. MVC og innebygd 
+4. Løkker og lister 
+5. Enhetstesting 
+6. Objekter
+
+Plan for i dag:
+ - Mer om if-setninger: else if og logiske operatorer
+ - Oppsummering operatorer
+ - Hvordan lage enkle komponenter i form av funksjoner med parametre og returverdi
+ - Hvis tid, begynner vi å se på innebygde funksjoner for tall, tekst og datoer
+
+* Mer om if-setninger: else if og logiske operatorer *
+  - if, else if, else
+  - logiske operatorer: og, eller, ikke 
+
+* Oppsummering operatorer * 
+  - artimetiske operatorer: + - * / %
+  - sammenligningsoperatorer:  == != < > <= >= === !==
+  - logiske operatorer: && || !
+  - tilorningsoperatorer = += -= *= /= %= ++ --
+  - ternary operator logiskVerdi ? verdiHvisSann : verdiEllers
